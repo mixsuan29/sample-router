@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, Link } from "react-router-dom"
 import axios from "axios"
 import { useEffect, useState } from "react"
 
@@ -26,7 +26,9 @@ export default function AlbumLayout() {
                 左側選單列表
                 {list.map((item) => {
                     return(
-                        <li key={item.id}>{ item.id }</li>
+                        <li key={item.id}>
+                            <Link to={item.id}>{item.id}</Link>
+                        </li>
                     )
                 })}
             </div>

@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About"
 import AlbumLayout from "./pages/AlbumLayout";
 import AlbumIndex from "./pages/AlbumIndex";
+import AlbumPhoto from "./pages/AlbumPhoto";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/about' element={<About />}></Route>
           <Route path='/album' element={<AlbumLayout />}>
             <Route index element={<AlbumIndex />}></Route>
+            <Route path=':id' element={<AlbumPhoto />}></Route> {/*動態路由*/}
           </Route>
         </Routes>
       </div>
