@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 const api = 'https://api.unsplash.com/search/photos';
 const accessId =  process.env.REACT_APP_UNSPASH_ACCESS;
-console.log(api, accessId);
+// console.log(api, accessId);
 export default function AlbumLayout() {
     const [list, setList] =useState([]);
 
@@ -14,7 +14,7 @@ export default function AlbumLayout() {
                 `${api}?client_id=${accessId}&query=cat`,
             );
             const { results } = response.data;
-            console.log(results);
+            // console.log(results);
 
             setList(results);
         })();
